@@ -1,0 +1,60 @@
+#top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/schedule.png");
+    background-position: 50%;
+}
+
+
+.day{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    
+    overflow: hidden;
+    height: fit-content;
+}
+
+.day .body img{
+    width: 100%;
+    max-width: 700px;
+
+    height: 100%;
+    max-height: 400px;
+}
+
+.day .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.day .head button{
+    margin: 0 !important;
+    cursor: pointer;
+    color: none;
+    border: none;
+    background-color: transparent;
+}
+
+.day .head button img{
+    width: 4svw;
+    height: 4svw;
+}
+
+.day .body{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Helps prevent layout shifts */
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s;
+}
+
+.day .body.visible {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Adjust based on content size */
+}
+
+.day .head button{
+    transition: transform 0.2s;
+}

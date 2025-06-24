@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #181818;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav-left a {
+    font-weight: bold;
+    color: #90caf9;
+    text-decoration: none;
+  }
+
+  .nav-left img {
+    max-width: 50px;
+  }
+  
+  .nav-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-center a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .nav-center a:hover {
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  section {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+  }
+  
+  h2 {
+    color: #90caf9;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #999;
+  }
+  
+  /* Galleria immagini e video */
+  .galleria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .galleria img,
+  .galleria video {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #000;
+  }
+  
+  /* Adattabilità per schermi piccoli */
+  @media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-center {
+      justify-content: center;
+    }
+  
+    .galleria img,
+    .galleria video {
+      max-width: 90%;
+    }
+  
+    section {
+      padding: 15px;
+      margin: 10px;
+    }
+  }
+  
+  section img{
+    max-width: 1000px;
+    border-radius: 8px;
+  }
+
+  /* Box per le competenze */
+  .competenze-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .competenze-box > div {
+    flex: 1 1 300px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #000;
+  }
+  
+  .competenze-box h3 {
+    color: #ffb74d;
+  }

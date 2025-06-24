@@ -1,0 +1,242 @@
+:root{
+    --theme: #f2f2f2;
+    --hover-theme: #1a6ece;
+    --panino-color: #000000;
+    --bar-height: 300px;
+}
+
+html{
+    /* width: 100vw; */
+
+    min-width: 300px;
+}
+
+/* ::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(37, 108, 201, 0.69);
+} */
+
+
+
+
+@keyframes toTop {
+  from{
+      opacity: 0;
+      top: 100px;
+  }
+
+  to{
+      opacity: 1;
+      top: 0;
+  }
+}
+
+
+@keyframes toRight {
+  from{
+      opacity: 0;
+      right: 100px;
+  }
+
+  to{
+      opacity: 1;
+      right: 0;
+  }
+}
+
+@media (max-width: 280px) {
+  main .top .title h1{
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+#button{
+    font-weight: 400;
+    font-style: normal;
+    color: black ;
+}
+body {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-style: normal;
+    overflow-y: visible;
+    height: 140vh;
+  }
+  .mainConteiner{
+    opacity: 0;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  a {
+    color: #000;
+  }
+  .header {
+    background-color: var(--theme); /*scegliere colori*/
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+    padding: 10px;
+    box-shadow: 0 5px 15px black;
+    
+
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+
+
+    box-sizing: border-box; /*per fixare il problema dell'overflow*/
+    /*
+    clamp(min, preferred, max)
+
+    min=dimensione minima possibile sotto cui non può scendere
+    preferred=valore che verrà usato finchè non sarà compreso tra min e max
+    max=dimensione massima sopra la quale non può salire
+    */
+
+    /* height: var(--bar-height); */
+  }
+ 
+  .logo img {
+    height: 67vh;
+  }
+  .header nav {
+    margin: 0;
+    padding: 0;
+    
+    
+    overflow: hidden;
+  }
+  .header ul{
+    list-style: none;
+  }
+  .header ul a {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  .header ul li{
+    border-radius: 10px;
+  }
+
+  .header li > *:hover{
+    background-color: var(--hover-theme);
+    color: white;
+  }
+  
+  .header .logo {
+    float: left;
+    font-size: 20px;
+    padding: 0;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+
+
+
+  .header .logo img{
+    width: 90px;
+    height: 60px;
+  }
+
+  .header .menu ul{
+    margin-top: 20px; /**/
+  }
+
+  
+  .header .menu {
+    clear:left;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  .header .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+  }
+  
+  .header .menu-icon .nav-icon {
+    background-color: var(--panino-color);
+    display: block;
+    width: 32px;
+    height: 4px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+  }
+  .header .menu-icon .nav-icon::before,
+  .header .menu-icon .nav-icon::after {
+    background-color: var(--panino-color);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+  .header .menu-icon .nav-icon::before {
+    top: 10px;
+  }
+  .header .menu-icon .nav-icon::after {
+    top: -10px;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  .header .menu-btn:checked ~ .menu {
+    min-height: var(--bar-height);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background-color: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  button{
+    margin-bottom: 10vh !important;
+}
+
+
+
+@media (max-width: 535px){
+    .logo p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 440px){
+    .logo p{
+        display: none;
+    }
+}

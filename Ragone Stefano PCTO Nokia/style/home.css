@@ -1,0 +1,117 @@
+#top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/nokia_entrance.jpg");
+}
+
+#history{
+    text-align: center;
+}
+
+article{
+    padding: 0;
+}
+
+
+#what-is-nokia{
+    background-color: var(--hover-theme);
+    color: white;
+    padding: 100px;
+
+    text-align: center;
+}
+
+
+#timeline{
+    display: flex;
+    justify-content: center;
+}
+
+#line{
+    background-color: var(--hover-theme);
+    width: 20px;
+    border-radius: 20px;
+}
+
+.dot{
+    clip-path: circle(30%);
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    
+}
+
+.description{
+    position: relative;
+    left: 30px;
+    top: -20px;
+    background-color: var(--hover-theme);
+    color: white;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    /* width: 20vw; */
+    width: clamp(15rem, 10vw, 20rem);
+    padding: 10px;
+    margin-bottom: 400px;
+    opacity: 0;
+    transform: translateX(var(--translation-percentage));
+    /* border: solid 1px black; */
+}
+
+/* .description.right{
+    transform: translateX(var(--translation-percentage));
+} */
+
+/* .description.left{
+    transform: translateX(-120%);
+} */
+
+/* .description::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+} */
+
+.description img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.description img.transparent{
+    position: relative;
+    bottom: 100px;
+    transform: rotateZ(20deg);
+}
+
+@media (max-width: 780px) {
+    #timeline{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 50px;
+    }
+
+    /* .description{
+        width: 60vw;
+    } */
+
+    .description.left{
+        transform: translateX(20%);
+    }
+}
+
+
+
+@keyframes to-right-description {
+    from{
+        transform: translateX(-40%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(var(--translation-percentage));
+        opacity: 1;
+    }
+}

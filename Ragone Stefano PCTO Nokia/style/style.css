@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --translation-percentage: 0%;
+}
+
+*{
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+#top{
+    /* background-image: url("../img/nokia_entrance.jpg"); */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/nokia_entrance.jpg"); */
+    min-height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+#top #title{
+    margin-left: 5%;
+    /* font-size: 5vw; */
+    position: relative;
+    height: fit-content;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+#top #title::before{
+    content: "";
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color:  var(--hover-theme);
+    height: 5%;
+    animation: width-anim 1s forwards .2s;
+}
+
+#top h1{
+    position: relative;
+    top: 0;
+    animation: to-right 1s forwards;
+    text-transform: uppercase;
+}
+
+
+
+
+article{
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+article > *{
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer #container{
+    display: flex;
+    column-gap: 80px;
+    padding: 80px;
+    justify-content: center;
+}
+
+footer .links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+footer .links > a{
+    text-decoration: none;
+    transition: transform .2s;
+    width: fit-content;
+}
+
+footer .links > a:hover{
+    transform: translate(10px, 0);
+}
+
+footer #important-links > *{
+    color: var(--hover-theme);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+footer #logo img{
+    width: 100px;
+}
+
+footer #socials img{
+    width: 30px;
+    height: 30px;
+}
+
+footer #socials{
+    display: flex;
+    column-gap: 20px;
+}
+
+footer #privacy-terms{
+    padding-left: 80px;
+    padding-bottom: 20px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #privacy-terms > *{
+    font-size: 12px;
+}
+
+
+
+
+
+@keyframes to-right {
+    from{
+        right: 100%;
+    }
+
+    to{
+        right: 0;
+    }
+}
+
+@keyframes width-anim {
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 30px;
+    }
+}
+
+@keyframes to-top {
+    from{
+        top: 100px;
+        opacity: 0;
+    }
+
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    footer #container{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    footer #privacy-terms{
+        justify-content: flex-start;
+    }
+}
