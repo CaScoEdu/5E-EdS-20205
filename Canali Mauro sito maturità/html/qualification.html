@@ -1,0 +1,130 @@
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Qualifica</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/translate.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-slot">
+          <img src="../img/logo.png" alt="Logo" class="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="..\index.html"
+                data-it="Introduzione"
+                data-en="Introduction"
+                >Introduzione</a
+              >
+            </li>
+            <li>
+              <a
+                href="presentation.html"
+                data-it="Presentazione"
+                data-en="Presentation"
+                >Presentazione</a
+              >
+            </li>
+            <li>
+              <a href="qualification.html" data-it="Competenze" data-en="Skills"
+                >Competenze</a
+              >
+            </li>
+            <li><button onclick="toggleLanguage()">EN/IT</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="slider small-slider">
+        <img
+          src="../img/walle_disegnato.png"
+          class="slide"
+          alt="Slide 1"
+          style="display: block"
+        />
+        <img
+          src="../img/walle_colla_in_piedi.png"
+          class="slide"
+          alt="Slide 2"
+        />
+        <img src="../img/walle_colla_attera.png" class="slide" alt="Slide 3" />
+      </div>
+      <div class="qualification-layout">
+        <div class="text-section">
+          <h1 data-it="Competenze tecniche" data-en="Technical skills">
+            Competenze tecniche
+          </h1>
+          <ul>
+            <li data-it="Programmare in python" data-en="Programming in python">
+              Programmare in python
+            </li>
+            <li
+              data-it="Gestire il movimento del robot"
+              data-en="Manage the robot's movement"
+            >
+              Gestire il movimento del robot
+            </li>
+            <li
+              data-it="Funzionamento di una camera anecoicha e ambientali"
+              data-en="Operation of an anechoic chamber and environmental chamber"
+            >
+              Funzionamento di una camera anecoicha e ambientali
+            </li>
+            <li
+              data-it="funzionamento di una intelligenza artificiale"
+              data-en="How does an AI work"
+            >
+              funzionamento di una intelligenza artificiale
+            </li>
+          </ul>
+        </div>
+        <div class="text-section">
+          <h1
+            data-it="Competenze interpersonali"
+            data-en="Interpersonal skills"
+          >
+            Competenze interpersonali
+          </h1>
+          <ul>
+            <li
+              data-it="Capacità di lavorare in gruppo"
+              data-en="Ability to work in a team"
+            >
+              Capacità di lavorare in gruppo
+            </li>
+            <li
+              data-it="Autonomia e responsabilità"
+              data-en="Autonomy and responsibility"
+            >
+              Autonomia e responsabilità
+            </li>
+            <li data-it="Problem solving" data-en="Problem solving">
+              Problem solving
+            </li>
+            <li
+              data-it="Comunicazione efficace"
+              data-en="Effective communication"
+            >
+              Comunicazione efficace
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((s, i) => (s.style.display = i === 0 ? "block" : "none"));
+    setInterval(() => {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }, 3000);
+  </script>
+</html>

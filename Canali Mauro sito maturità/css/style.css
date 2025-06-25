@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  background-color: #e6f0ff;
+  color: #003366;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0059b3;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-slot {
+  padding: 0.5em;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a,
+nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+.intro-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.image-section img {
+  max-height: 74vh;
+  object-fit: contain;
+}
+
+.text-block {
+  margin: 6px;
+}
+
+.image-section,
+.text-section {
+  margin-bottom: 1em;
+  flex: 1;
+  min-width: 300px;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto 1em 26em;
+}
+
+.small-slider {
+  max-width: 50%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.video-text.horizontal-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.video-small {
+  width: 405px;
+  height: auto;
+}
+
+.qualification-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,55 @@
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Presentazione</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/translate.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-slot">
+          <img src="../img/logo.png" alt="Logo" class="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="..\index.html"
+                data-it="Introduzione"
+                data-en="Introduction"
+                >Introduzione</a
+              >
+            </li>
+            <li>
+              <a
+                href="presentation.html"
+                data-it="Presentazione"
+                data-en="Presentation"
+                >Presentazione</a
+              >
+            </li>
+            <li>
+              <a href="qualification.html" data-it="Competenze" data-en="Skills"
+                >Competenze</a
+              >
+            </li>
+            <li><button onclick="toggleLanguage()">EN/IT</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="video-text horizontal-layout">
+        <video controls muted class="video-small">
+          <source src="../video/video_alto.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video controls muted class="video">
+          <source src="../video/slide_imagini_robot.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </main>
+  </body>
+</html>
